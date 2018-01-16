@@ -34,6 +34,7 @@ function returnMyAge(): number{
 }
 console.log(returnMyAge());
 
+// void returns nothing
 function sayHello(): void{
     console.log("Hello!")
 }
@@ -66,3 +67,40 @@ let complex: Complex = {
 };
 
 console.log(complex);
+
+let myRealRealAge: number | string = 27;
+myRealRealAge = "15";
+
+let finalValue = 30;
+if(typeof finalValue == "number") {
+    console.log("Final value is a number!");
+}
+
+// "never" never returns anything. Void returns nothing while never doesn't return anything
+function neverReturns(): never {
+    throw new Error("An error occured!");
+}
+
+let canBeNull : number | null = 12;
+canBeNull = null;
+let canAlsoBeNull;
+canAlsoBeNull = null;
+let canThisBeAny = null;
+
+type myBankAccount = { money: number, deposit: (val1: number) => void;};
+
+let bankAccount: myBankAccount = {
+    money: 2000,
+    deposit(value: number) {
+        this.money += value;
+    }
+};
+
+let myself: {name: string, bankAccount: myBankAccount, hobbies: string[]} = {
+    name: "Paul",
+    bankAccount: bankAccount,
+    hobbies: ["Sports", "Cooking"]
+};
+
+myself.bankAccount.deposit(3000);
+console.log(myself);

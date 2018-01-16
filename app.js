@@ -28,6 +28,7 @@ function returnMyAge() {
     return myAge;
 }
 console.log(returnMyAge());
+// void returns nothing
 function sayHello() {
     console.log("Hello!");
 }
@@ -50,3 +51,13 @@ var complex = {
     }
 };
 console.log(complex);
+var myRealRealAge = 27;
+myRealRealAge = "15";
+var finalValue = 30;
+if (typeof finalValue == "number") {
+    console.log("Final value is a number!");
+}
+// "never" never returns anything. Void returns nothing while never doesn't return anything
+function neverReturns() {
+    throw new Error("An error occured!");
+}
