@@ -61,3 +61,21 @@ if (typeof finalValue == "number") {
 function neverReturns() {
     throw new Error("An error occured!");
 }
+var canBeNull = 12;
+canBeNull = null;
+var canAlsoBeNull;
+canAlsoBeNull = null;
+var canThisBeAny = null;
+var bankAccount = {
+    money: 2000,
+    deposit: function (value) {
+        this.money += value;
+    }
+};
+var myself = {
+    name: "Paul",
+    bankAccount: bankAccount,
+    hobbies: ["Sports", "Cooking"]
+};
+myself.bankAccount.deposit(3000);
+console.log(myself);
