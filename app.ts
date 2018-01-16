@@ -47,3 +47,22 @@ console.log(multiply(5, 20));
 let myMultiply: (val1: number, val2: number) => number;
 myMultiply = multiply;
 console.log(myMultiply(5,1));
+
+let userData: { name: string, age: number } = {
+    name: "Paul",
+    age: 25
+};
+console.log(userData);
+
+type Complex = {data: number[], output: (all: boolean) => number[]};
+
+let complex: Complex = {
+    data: [100, 3.99, 10],
+
+    output: function (all: boolean): number[] {
+        return this.data
+
+    }
+};
+
+console.log(complex);

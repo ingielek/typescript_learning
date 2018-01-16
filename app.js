@@ -38,3 +38,15 @@ console.log(multiply(5, 20));
 var myMultiply;
 myMultiply = multiply;
 console.log(myMultiply(5, 1));
+var userData = {
+    name: "Paul",
+    age: 25
+};
+console.log(userData);
+var complex = {
+    data: [100, 3.99, 10],
+    output: function (all) {
+        return this.data;
+    }
+};
+console.log(complex);
