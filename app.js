@@ -79,3 +79,16 @@ var myself = {
 };
 myself.bankAccount.deposit(3000);
 console.log(myself);
+// REST AND SPREAD
+var numbers = [1, 10, 99, -5, 101];
+console.log(Math.max.apply(Math, numbers));
+function makeArray() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+    return args;
+}
+;
+console.log(makeArray(1, 2, 6));
+//# sourceMappingURL=app.js.map

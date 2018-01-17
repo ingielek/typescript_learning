@@ -62,7 +62,6 @@ let complex: Complex = {
 
     output: function (all: boolean): number[] {
         return this.data
-
     }
 };
 
@@ -104,3 +103,15 @@ let myself: {name: string, bankAccount: myBankAccount, hobbies: string[]} = {
 
 myself.bankAccount.deposit(3000);
 console.log(myself);
+
+// REST AND SPREAD
+
+const numbers = [1, 10, 99, -5, 101];
+console.log(Math.max(...numbers));
+
+function makeArray (...args: number []) {
+    return args;
+};
+console.log(makeArray(1, 2, 6));
+
+const myHobbies: string[] = ["Cooking", "Sports"];
