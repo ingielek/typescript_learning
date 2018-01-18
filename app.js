@@ -110,8 +110,23 @@ button.addEventListener("click", function () {
 console.log(h1.innerText);
 // CLASS
 var Person = /** @class */ (function () {
-    function Person() {
+    function Person(name, username) {
+        this.username = username;
+        this.age = 25;
+        this.name = name;
+        this.username = username;
     }
+    Person.prototype.printAge = function () {
+        console.log(this.age);
+    };
+    Person.prototype.setType = function (type) {
+        this.type = type;
+        console.log(this.type);
+    };
     return Person;
 }());
+var person = new Person("Max", "pawcio");
+console.log(person);
+person.printAge();
+person.setType("cool");
 //# sourceMappingURL=app.js.map

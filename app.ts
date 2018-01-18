@@ -145,5 +145,26 @@ console.log(h1.innerText);
 // CLASS
 
 class Person {
+    name: string;
+    private type: string;
+    protected age: number = 25;
+    constructor(name: string, public username: string){
+        this.name = name;
+        this.username = username;
+    }
 
+    printAge(){
+        console.log(this.age);
+    }
+
+    setType(type: string){
+        this.type = type;
+        console.log(this.type);
+    }
 }
+
+const person = new Person("Max", "pawcio");
+console.log(person);
+
+person.printAge();
+person.setType("cool");
