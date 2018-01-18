@@ -89,6 +89,29 @@ function makeArray() {
     }
     return args;
 }
-;
 console.log(makeArray(1, 2, 6));
+// DESTRUCTURING AN ARRAY
+var myHobbies = ["Cooking", "Sports"];
+var hobby1 = myHobbies[0], hobby2 = myHobbies[1];
+console.log(hobby1, hobby2);
+// DESTRUCTURING AN OBJECT
+var userDatas = { userName: "Max", age: 27 };
+var userName = userDatas.userName, age = userDatas.age;
+console.log(userName, age);
+// TEMPLATE LITERALS
+var userTitle = "Pawel";
+var greeting = " this is a heading\nI'm " + userTitle + ",\nThis is cool!";
+console.log(greeting);
+var h1 = document.getElementById("header");
+var button = document.getElementById("btn");
+button.addEventListener("click", function () {
+    h1.innerText = "Witaj";
+});
+console.log(h1.innerText);
+// CLASS
+var Person = /** @class */ (function () {
+    function Person() {
+    }
+    return Person;
+}());
 //# sourceMappingURL=app.js.map

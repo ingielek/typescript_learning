@@ -111,7 +111,39 @@ console.log(Math.max(...numbers));
 
 function makeArray (...args: number []) {
     return args;
-};
+}
 console.log(makeArray(1, 2, 6));
 
+// DESTRUCTURING AN ARRAY
 const myHobbies: string[] = ["Cooking", "Sports"];
+const [hobby1, hobby2] = myHobbies;
+console.log(hobby1, hobby2);
+
+// DESTRUCTURING AN OBJECT
+
+const userDatas: {userName: string, age: number} = {userName: "Max", age: 27};
+const {userName, age} = userDatas;
+console.log(userName, age);
+
+// TEMPLATE LITERALS
+
+const userTitle = "Pawel";
+const greeting = ` this is a heading
+I'm ${userTitle},
+This is cool!`;
+console.log(greeting);
+
+const h1 = document.getElementById("header");
+const button = document.getElementById("btn");
+button.addEventListener("click", function (){
+    h1.innerText = "Witaj";
+});
+
+console.log(h1.innerText);
+
+
+// CLASS
+
+class Person {
+
+}
