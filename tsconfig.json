@@ -3,7 +3,7 @@
     /* Basic Options */
     "target": "es5",
     "module": "commonjs",
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "sourceMap": true,
     "noEmitOnError": true,
     "strictNullChecks": false,

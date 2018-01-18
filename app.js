@@ -1,4 +1,14 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 console.log("Hello World!");
 var myName = "Paul";
 console.log(myName);
@@ -129,4 +139,53 @@ var person = new Person("Max", "pawcio");
 console.log(person);
 person.printAge();
 person.setType("cool");
+var Paul = /** @class */ (function (_super) {
+    __extends(Paul, _super);
+    function Paul(username) {
+        var _this = _super.call(this, "Max", username) || this;
+        _this.age = 33;
+        return _this;
+    }
+    return Paul;
+}(Person));
+var paulie = new Paul("paul");
+console.log(paulie);
+var Plant = /** @class */ (function () {
+    function Plant() {
+        this._species = "Default";
+    }
+    Object.defineProperty(Plant.prototype, "species", {
+        get: function () {
+            return this._species;
+        },
+        set: function (value) {
+            if (value.length > 3) {
+                this._species = value;
+            }
+            else {
+                this._species = "Default";
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return Plant;
+}());
+var plant = new Plant();
+console.log(plant.species);
+plant.species = "AB";
+console.log(plant.species);
+plant.species = "Green plant";
+console.log(plant.species);
+var Helpers = /** @class */ (function () {
+    function Helpers() {
+    }
+    Helpers.calcCircumference = function (diameter) {
+        return this.PI * diameter;
+    };
+    Helpers.PI = 3.14;
+    return Helpers;
+}());
+console.log(2 * Helpers.PI);
+console.log(Helpers.calcCircumference(8));
 //# sourceMappingURL=app.js.map

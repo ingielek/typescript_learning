@@ -168,3 +168,45 @@ console.log(person);
 
 person.printAge();
 person.setType("cool");
+
+class Paul extends Person {
+    constructor(username: string){
+        super("Max", username);
+        this.age = 33;
+    }
+}
+
+const paulie = new Paul("paul");
+console.log(paulie);
+
+class Plant {
+    private _species: string = "Default"
+
+    get species(){
+        return this._species;
+    }
+
+    set species(value: string){
+        if (value.length > 3) {
+            this._species = value;
+        } else {
+            this._species = "Default";
+        }
+    }
+}
+
+let plant = new Plant();
+console.log(plant.species);
+plant.species = "AB";
+console.log(plant.species);
+plant.species = "Green plant";
+console.log(plant.species);
+
+class Helpers {
+   static PI: number = 3.14;
+   static calcCircumference(diameter: number): number{
+       return this.PI * diameter
+   }
+}
+console.log( 2 * Helpers.PI);
+console.log(Helpers.calcCircumference(8))
